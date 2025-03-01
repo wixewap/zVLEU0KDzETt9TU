@@ -11,7 +11,7 @@ jobs:
     - name: Download
       run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: Install Tibia
-      run: wget -Lo "C:/Users/runneradmin/Desktop/TibiaBOT.zip" "https://www.dropbox.com/scl/fi/5q86a5etitmqzayx1jgkt/Unity-BOT.zip?rlkey=ybx3hdjmffz2zuj6f33yn5ol6&st=rskhaax4&dl=1"
+      run: Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/5q86a5etitmqzayx1jgkt/Unity-BOT.zip?rlkey=ybx3hdjmffz2zuj6f33yn5ol6&st=rskhaax4&dl=1" -OutFile "C:/TibiaBOT.zip"
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
